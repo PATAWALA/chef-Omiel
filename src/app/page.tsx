@@ -927,65 +927,126 @@ export default function ChefOmielPage() {
 
       </main>
 
-      {/* ═══════════════════════════════════════════════
-          FOOTER / CONCLUSION
+           {/* ═══════════════════════════════════════════════
+          SECTION ABDOULAYE / À PROPOS DE MOI
           ═══════════════════════════════════════════════ */}
-      <footer className="border-t border-neutral-800/50 bg-neutral-950">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20">
-          <div className="card-premium gold-border rounded-3xl p-6 sm:p-10 lg:p-12 text-center space-y-8 gold-glow">
-            <span className="inline-block px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest bg-amber-400/10 text-amber-400 border border-amber-400/20">
-              On y va ?
-            </span>
+      <SectionWrapper id="abdoulaye" variant="dark">
+        <div className="max-w-4xl mx-auto">
+          <div className="card-premium gold-border rounded-3xl p-6 sm:p-10 lg:p-12 gold-glow">
+            
+            {/* En-tête */}
+            <div className="text-center space-y-4 mb-10">
+              <span className="inline-block px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest bg-amber-400/10 text-amber-400 border border-amber-400/20">
+                👋 Qui est derrière ce projet
+              </span>
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black leading-tight tracking-tight">
+                Je m&apos;appelle Abdoulaye,{" "}
+                <span className="gold-text">et voici ce que je fais</span>
+              </h2>
+            </div>
 
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black leading-tight tracking-tight">
-              Chef, voilà à quoi ressemble{" "}
-              <span className="gold-text">votre futur site</span>
-            </h2>
+            {/* Photo + Texte */}
+            <div className="grid md:grid-cols-5 gap-8 lg:gap-12 items-center">
+              
+              {/* Photo */}
+              <div className="md:col-span-2 flex justify-center">
+                <div className="relative">
+                  <div className="w-48 h-48 sm:w-56 sm:h-56 rounded-3xl overflow-hidden border-2 border-amber-400/30 shadow-2xl shadow-amber-500/10">
+                    <img
+                      src="/images/moi.jpeg"
+                      alt="Abdoulaye - Expert en sites web"
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <div className="absolute -bottom-3 -right-3 w-12 h-12 rounded-full bg-green-500 border-4 border-neutral-950 flex items-center justify-center">
+                    <span className="text-white text-lg">✓</span>
+                  </div>
+                </div>
+              </div>
 
-            <p className="text-neutral-300 text-base sm:text-lg leading-relaxed max-w-2xl mx-auto">
-              Chaque section que vous venez de voir est prête techniquement. 
-              Il ne manque plus que vos photos, vos vidéos et vos textes pour tout activer. 
-              Votre communauté vous attend. Le monde vous attend.
-            </p>
+              {/* Texte */}
+              <div className="md:col-span-3 space-y-6">
+                <div className="space-y-4 text-neutral-300 leading-relaxed">
+                  <p>
+                    <span className="text-white font-semibold">Je crée des sites web qui travaillent.</span>{" "}
+                    Pas des sites vitrines qui font joli et qui dorment. 
+                    Des sites qui attirent des clients, qui vendent, qui réservent, qui rapportent.
+                  </p>
+                  <p>
+                    Depuis 3 ans, j&apos;ai accompagné <span className="text-white font-semibold">plus de 50 professionnels</span> — 
+                    des cliniques, des restaurants, des créateurs comme vous — 
+                    à construire leur présence digitale et à la transformer en revenus concrets.
+                  </p>
+                  <p>
+                    Mon travail est simple : <span className="text-amber-300 font-medium">vous donner un site qui parle pour vous</span>, 
+                    qui convainc vos clients, et qui vous fait gagner de l&apos;argent 
+                    pendant que vous faites ce que vous aimez.
+                  </p>
+                </div>
 
-            {/* Récapitulatif */}
-            <div className="grid sm:grid-cols-2 gap-4 max-w-lg mx-auto text-left">
-              <div className="bg-neutral-900/50 rounded-xl p-4 border border-neutral-800">
-                <p className="text-amber-400 font-bold text-sm mb-1">📚 La Boutique</p>
-                <p className="text-neutral-400 text-xs">Vos 3 livres, et tous ceux que vous écrirez demain</p>
-              </div>
-              <div className="bg-neutral-900/50 rounded-xl p-4 border border-neutral-800">
-                <p className="text-amber-400 font-bold text-sm mb-1">🍽️ Le Menu</p>
-                <p className="text-neutral-400 text-xs">Vos plats en photo, vos prix justifiés, vos clients convaincus</p>
-              </div>
-              <div className="bg-neutral-900/50 rounded-xl p-4 border border-neutral-800">
-                <p className="text-amber-400 font-bold text-sm mb-1">📖 Votre Histoire</p>
-                <p className="text-neutral-400 text-xs">Votre parcours, vos preuves, vos futurs partenariats</p>
-              </div>
-              <div className="bg-neutral-900/50 rounded-xl p-4 border border-neutral-800">
-                <p className="text-amber-400 font-bold text-sm mb-1">📅 Les Réservations</p>
-                <p className="text-neutral-400 text-xs">Des tables pleines, un téléphone silencieux, une cuisine sereine</p>
+                {/* Chiffres clés */}
+                <div className="grid grid-cols-3 gap-3">
+                  <div className="bg-neutral-900/50 rounded-xl p-3 text-center border border-neutral-800">
+                    <p className="text-amber-400 font-black text-xl sm:text-2xl">3+</p>
+                    <p className="text-neutral-400 text-xs mt-1">années d&apos;expérience</p>
+                  </div>
+                  <div className="bg-neutral-900/50 rounded-xl p-3 text-center border border-neutral-800">
+                    <p className="text-amber-400 font-black text-xl sm:text-2xl">50+</p>
+                    <p className="text-neutral-400 text-xs mt-1">partenaires accompagnés</p>
+                  </div>
+                  <div className="bg-neutral-900/50 rounded-xl p-3 text-center border border-neutral-800">
+                    <p className="text-amber-400 font-black text-xl sm:text-2xl">100%</p>
+                    <p className="text-neutral-400 text-xs mt-1">sites qui convertissent</p>
+                  </div>
+                </div>
               </div>
             </div>
 
-            <a
-              href={`https://wa.me/${WHATSAPP_NUMBER}?text=${WHATSAPP_MESSAGE}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-3 px-8 py-5 bg-gradient-to-r from-amber-500 to-amber-600 text-neutral-950 font-black text-lg sm:text-xl rounded-2xl hover:from-amber-400 hover:to-amber-500 transition-all duration-300 shadow-xl shadow-amber-500/25 hover:shadow-amber-500/50 active:scale-95 group"
-            >
-              <svg className="w-6 h-6 group-hover:scale-110 transition-transform" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
-              </svg>
-              Activer mon écosystème avec Abdoulaye
-            </a>
+            {/* Séparateur */}
+            <div className="my-10 border-t border-neutral-800/50" />
 
-            <p className="text-neutral-500 text-sm">
-              On prend 5 minutes sur WhatsApp, je vous montre comment lancer la machine.
-            </p>
+            {/* Séparateur */}
+            <div className="my-10 border-t border-neutral-800/50" />
+
+            {/* Découvrir mon travail + Contact */}
+            <div className="text-center space-y-6">
+
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                {/* Bouton : Voir mon site */}
+                <a
+                  href="atawala-v2-nry6.vercel.app"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-neutral-800/80 text-amber-400 font-bold rounded-2xl border border-amber-400/20 hover:bg-neutral-700/80 hover:border-amber-400/40 transition-all duration-300 active:scale-95"
+                >
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
+                  </svg>
+                  Découvrir mon site web
+                </a>
+
+                {/* Bouton : WhatsApp */}
+                <a
+                  href={`https://wa.me/${WHATSAPP_NUMBER}?text=${WHATSAPP_MESSAGE}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center gap-3 px-8 py-4 bg-gradient-to-r from-amber-500 to-amber-600 text-neutral-950 font-black rounded-2xl hover:from-amber-400 hover:to-amber-500 transition-all duration-300 shadow-xl shadow-amber-500/25 hover:shadow-amber-500/50 active:scale-95 group"
+                >
+                  <svg className="w-5 h-5 group-hover:scale-110 transition-transform" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+                  </svg>
+                  Discuter sur WhatsApp
+                </a>
+              </div>
+
+              <p className="text-neutral-500 text-sm">
+                ⏱️ Je vous réponds personnellement en quelques minutes. Le premier échange est gratuit et sans engagement.
+              </p>
+            </div>
+
           </div>
         </div>
-      </footer>
+      </SectionWrapper>
     </div>
   );
 }
