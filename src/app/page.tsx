@@ -31,14 +31,12 @@ export default function ChefOmielPage() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
-  // ─── Détection du scroll pour l'ombre du header ─────────
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 20);
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // ─── Scroll vers la section active ─────────────────────
   const scrollToSection = useCallback((id: SectionId) => {
     setActiveSection(id);
     setMobileMenuOpen(false);
@@ -55,7 +53,6 @@ export default function ChefOmielPage() {
     }
   }, []);
 
-  // ─── Intersection Observer pour mise à jour auto ────────
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -76,7 +73,6 @@ export default function ChefOmielPage() {
     return () => observer.disconnect();
   }, []);
 
-  // ─── RENDU ─────────────────────────────────────────────
   return (
     <div className="min-h-screen bg-neutral-950 text-neutral-100 selection:bg-amber-500/30 selection:text-amber-200">
       {/* ─── HEADER ──────────────────────────────────── */}
@@ -89,7 +85,6 @@ export default function ChefOmielPage() {
       >
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16 sm:h-20">
-            {/* Logo */}
             <button
               onClick={() => scrollToSection("accueil")}
               className="flex items-center gap-3 group"
@@ -103,7 +98,6 @@ export default function ChefOmielPage() {
               </span>
             </button>
 
-            {/* Desktop Nav */}
             <nav className="hidden lg:flex items-center gap-1">
               {NAV_ITEMS.map((item) => (
                 <button
@@ -124,7 +118,6 @@ export default function ChefOmielPage() {
               ))}
             </nav>
 
-            {/* Bouton CTA Header + Burger Mobile */}
             <div className="flex items-center gap-3">
               <a
                 href={`https://wa.me/${WHATSAPP_NUMBER}?text=${WHATSAPP_MESSAGE}`}
@@ -138,7 +131,6 @@ export default function ChefOmielPage() {
                 WhatsApp
               </a>
 
-              {/* Burger Mobile */}
               <button
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
                 className="lg:hidden relative w-10 h-10 flex items-center justify-center rounded-xl bg-neutral-800/50 border border-neutral-700/50"
@@ -165,7 +157,6 @@ export default function ChefOmielPage() {
             </div>
           </div>
 
-          {/* Mobile Menu */}
           <div
             className={`lg:hidden overflow-hidden transition-all duration-400 ${
               mobileMenuOpen ? "max-h-96 pb-4" : "max-h-0"
@@ -210,7 +201,6 @@ export default function ChefOmielPage() {
             ═══════════════════════════════════════════════ */}
         <SectionWrapper id="accueil" variant="hero">
           <div className="grid lg:grid-cols-5 gap-8 lg:gap-12 items-center">
-            {/* Texte */}
             <div className="lg:col-span-3 space-y-6">
               <span className="inline-block px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest bg-amber-400/10 text-amber-400 border border-amber-400/20">
                 🏠 La page d&apos;accueil
@@ -227,7 +217,6 @@ export default function ChefOmielPage() {
                 Je vous explique tout, simplement.
               </p>
 
-              {/* ─── EXPLICATION SIMPLE ACCUEIL ────────── */}
               <div className="space-y-5 text-base leading-relaxed">
                 {/* Ce que vous voyez */}
                 <div className="bg-neutral-900/50 rounded-2xl p-5 border border-neutral-800">
@@ -245,18 +234,29 @@ export default function ChefOmielPage() {
                   <p className="text-amber-400 font-bold text-sm uppercase tracking-wider mb-3">
                     🎥 Ce qu&apos;on va mettre ici
                   </p>
-                  <ul className="space-y-2 text-neutral-300">
-                    <li className="flex items-start gap-2">
-                      <span className="text-amber-400">1.</span>
-                      <span><span className="text-white font-medium">Une vidéo de vous en cuisine</span> — avec votre musique Hip-hop en fond, pour que les gens ressentent votre univers en 3 secondes.</span>
+                  <ul className="space-y-3 text-neutral-300">
+                    <li className="flex items-start gap-3">
+                      <span className="text-amber-400 text-lg mt-0.5">🎬</span>
+                      <span>
+                        <span className="text-white font-medium">Une vidéo de vous en cuisine</span> — avec votre musique Hip-hop en fond. 
+                        En 3 secondes, le visiteur ressent votre univers, votre énergie. 
+                        Exactement comme quand on entre dans votre restaurant.
+                      </span>
                     </li>
-                    <li className="flex items-start gap-2">
-                      <span className="text-amber-400">2.</span>
-                      <span><span className="text-white font-medium">Un message clair</span> qui dit qui vous êtes et ce que vous proposez.</span>
+                    <li className="flex items-start gap-3">
+                      <span className="text-amber-400 text-lg mt-0.5">📝</span>
+                      <span>
+                        <span className="text-white font-medium">Un message clair</span> qui dit qui vous êtes : 
+                        créateur culinaire, 10 ans de recherche, 3 livres, 3000 photos. 
+                        Tout de suite, le visiteur comprend l&apos;ampleur de votre travail.
+                      </span>
                     </li>
-                    <li className="flex items-start gap-2">
-                      <span className="text-amber-400">3.</span>
-                      <span><span className="text-white font-medium">Des boutons</span> qui dirigent les gens vers vos livres ou vos réservations.</span>
+                    <li className="flex items-start gap-3">
+                      <span className="text-amber-400 text-lg mt-0.5">👆</span>
+                      <span>
+                        <span className="text-white font-medium">Des boutons visibles</span> qui dirigent les gens 
+                        vers vos livres ou vos réservations. Comme un guide qui prend le visiteur par la main.
+                      </span>
                     </li>
                   </ul>
                 </div>
@@ -264,12 +264,38 @@ export default function ChefOmielPage() {
                 {/* Résultat */}
                 <div className="bg-green-500/5 rounded-2xl p-5 border border-green-500/20">
                   <p className="text-green-400 font-bold text-sm uppercase tracking-wider mb-3">
-                    ✅ Le résultat pour vous
+                    ✅ Ce que ça change pour vous
+                  </p>
+                  <div className="space-y-3 text-neutral-300">
+                    <p>
+                      → Vous avez déjà une <span className="text-white font-medium">grande communauté sur Facebook</span>. 
+                      Imaginez maintenant que chaque fois que vous publiez, vous pouvez dire à cette communauté : 
+                      &ldquo;Retrouvez tout mon univers sur mon site&rdquo;. 
+                      Votre site devient le quartier général où tout converge.
+                    </p>
+                    <p>
+                      → Un touriste à Paris, un Gabonais de la diaspora, un journaliste qui prépare un article — 
+                      ils tapent &ldquo;Chef Omiel&rdquo; ou &ldquo;gastronomie gabonaise&rdquo; sur Google, 
+                      et <span className="text-white font-medium">c&apos;est vous qu&apos;ils trouvent</span>. 
+                      Pas un article de 2019, pas une page Facebook incomplète : votre site, votre univers, votre contrôle.
+                    </p>
+                    <p>
+                      → Votre site travaille pour vous <span className="text-white font-medium">24 heures sur 24, 7 jours sur 7</span>. 
+                      Pendant que vous cuisinez, pendant que vous dormez, pendant que vous êtes en déplacement.
+                    </p>
+                  </div>
+                </div>
+
+                {/* Projection */}
+                <div className="bg-amber-500/5 rounded-2xl p-5 border border-amber-500/20">
+                  <p className="text-amber-300 font-bold text-sm uppercase tracking-wider mb-3">
+                    🔮 Imaginez dans 6 mois
                   </p>
                   <p className="text-neutral-300">
-                    Quand un Gabonais ou un touriste cherche &ldquo;gastronomie gabonaise&rdquo; sur Google, 
-                    <span className="text-white font-medium"> c&apos;est vous qu&apos;il trouve en premier</span>. 
-                    Plus besoin de dépendre de Facebook pour être visible.
+                    Un partenaire potentiel vous appelle. Il a visité votre site. Il a vu la vidéo, 
+                    les livres, les photos, les preuves. Avant même de décrocher son téléphone, 
+                    <span className="text-white font-medium"> il est déjà convaincu</span>. 
+                    Votre site a fait le travail de persuasion à votre place.
                   </p>
                 </div>
               </div>
@@ -314,7 +340,6 @@ export default function ChefOmielPage() {
             ═══════════════════════════════════════════════ */}
         <SectionWrapper id="boutique" variant="dark">
           <div className="grid lg:grid-cols-5 gap-8 lg:gap-12 items-center">
-            {/* Visuel */}
             <div className="lg:col-span-2 order-2 lg:order-1">
               <p className="text-amber-400 font-bold text-xs uppercase tracking-widest mb-3 text-center lg:text-left">
                 📚 Comment vos livres seront présentés
@@ -341,20 +366,18 @@ export default function ChefOmielPage() {
               </div>
             </div>
 
-            {/* Texte */}
             <div className="lg:col-span-3 order-1 lg:order-2 space-y-6">
               <span className="inline-block px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest bg-amber-400/10 text-amber-400 border border-amber-400/20">
                 🛍️ Votre boutique en ligne
               </span>
 
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black leading-tight tracking-tight">
-                Un endroit rien qu&apos;à vous{" "}
-                <span className="gold-text">pour vendre vos 3 livres</span>
+                Vendez vos livres, votre savoir,{" "}
+                <span className="gold-text">vos connaissances</span>
               </h2>
 
-              {/* ─── EXPLICATION SIMPLE BOUTIQUE ────────── */}
               <div className="space-y-5 text-base leading-relaxed">
-                {/* Situation actuelle vs future */}
+                {/* Comparaison */}
                 <div className="grid sm:grid-cols-2 gap-4">
                   <div className="bg-red-500/5 rounded-2xl p-4 border border-red-500/20">
                     <p className="text-red-400 font-bold text-sm uppercase tracking-wider mb-2">
@@ -362,8 +385,8 @@ export default function ChefOmielPage() {
                     </p>
                     <p className="text-neutral-400 text-sm">
                       Les gens vous envoient des messages privés sur Facebook pour commander. 
-                      Vous devez répondre à chaque personne, organiser le paiement, envoyer le PDF. 
-                      C&apos;est long et ça vous prend du temps.
+                      Vous devez répondre à chaque personne, organiser le paiement, envoyer le PDF manuellement. 
+                      C&apos;est long et ça vous prend du temps que vous pourriez passer en cuisine.
                     </p>
                   </div>
                   <div className="bg-green-500/5 rounded-2xl p-4 border border-green-500/20">
@@ -372,8 +395,8 @@ export default function ChefOmielPage() {
                     </p>
                     <p className="text-neutral-300 text-sm">
                       Le client arrive, clique sur &ldquo;Acheter&rdquo;, paie avec son téléphone 
-                      (Airtel Money, Moov Money, Carte Bancaire), et reçoit le livre automatiquement. 
-                      Vous ne faites rien. Le système travaille pour vous.
+                      (Airtel Money, Moov Money, Carte Bancaire, PayPal), et reçoit le livre automatiquement. 
+                      Vous, vous ne faites rien. Le système travaille pour vous.
                     </p>
                   </div>
                 </div>
@@ -387,29 +410,29 @@ export default function ChefOmielPage() {
                     <div className="flex items-start gap-3">
                       <div className="w-8 h-8 rounded-full bg-amber-500/20 border border-amber-500/30 flex items-center justify-center text-amber-400 font-bold text-sm shrink-0">1</div>
                       <div>
-                        <p className="text-white font-medium text-sm">Le client voit vos livres</p>
-                        <p className="text-neutral-400 text-sm">Les 3 tomes sont affichés avec leurs couvertures et le prix.</p>
+                        <p className="text-white font-medium text-sm">Le client arrive sur votre boutique</p>
+                        <p className="text-neutral-400 text-sm">Il voit vos 3 tomes avec leurs couvertures, le prix, et un bouton &ldquo;Précommander&rdquo;.</p>
                       </div>
                     </div>
                     <div className="flex items-start gap-3">
                       <div className="w-8 h-8 rounded-full bg-amber-500/20 border border-amber-500/30 flex items-center justify-center text-amber-400 font-bold text-sm shrink-0">2</div>
                       <div>
-                        <p className="text-white font-medium text-sm">Il clique sur &ldquo;Précommander&rdquo;</p>
-                        <p className="text-neutral-400 text-sm">Le livre s&apos;ajoute au panier, comme sur n&apos;importe quelle boutique en ligne.</p>
+                        <p className="text-white font-medium text-sm">Il clique, il paie</p>
+                        <p className="text-neutral-400 text-sm">Par Mobile Money, Carte Bancaire ou PayPal. C&apos;est sécurisé, c&apos;est automatique.</p>
                       </div>
                     </div>
                     <div className="flex items-start gap-3">
                       <div className="w-8 h-8 rounded-full bg-amber-500/20 border border-amber-500/30 flex items-center justify-center text-amber-400 font-bold text-sm shrink-0">3</div>
                       <div>
-                        <p className="text-white font-medium text-sm">Il paie avec son téléphone</p>
-                        <p className="text-neutral-400 text-sm">Mobile Money, Carte Bancaire, ou PayPal pour l&apos;étranger. Tout est automatique.</p>
+                        <p className="text-white font-medium text-sm">Le livre est livré tout seul</p>
+                        <p className="text-neutral-400 text-sm">PDF : envoyé par email en quelques secondes. Livre physique : vous recevez une notification pour l&apos;expédition.</p>
                       </div>
                     </div>
                     <div className="flex items-start gap-3">
                       <div className="w-8 h-8 rounded-full bg-amber-500/20 border border-amber-500/30 flex items-center justify-center text-amber-400 font-bold text-sm shrink-0">4</div>
                       <div>
-                        <p className="text-white font-medium text-sm">Le livre est livré tout seul</p>
-                        <p className="text-neutral-400 text-sm">PDF envoyé par email instantanément. Livre physique : vous recevez une notification pour l&apos;expédition.</p>
+                        <p className="text-white font-medium text-sm">L&apos;argent arrive sur votre compte</p>
+                        <p className="text-neutral-400 text-sm">100% du prix de vente. Pas de commission à une plateforme. Pas d&apos;intermédiaire.</p>
                       </div>
                     </div>
                   </div>
@@ -420,11 +443,35 @@ export default function ChefOmielPage() {
                   <p className="text-green-400 font-bold text-sm uppercase tracking-wider mb-3">
                     ✅ Ce que ça change pour vous
                   </p>
-                  <div className="space-y-2 text-neutral-300 text-sm">
-                    <p>→ Des gens du Gabon, de France, des États-Unis ou du Canada peuvent acheter vos livres <span className="text-white font-medium">jour et nuit, sans que vous leviez le petit doigt</span>.</p>
-                    <p>→ <span className="text-white font-medium">100% de l&apos;argent vous revient.</span> Pas de commission à Amazon ou aux librairies.</p>
-                    <p>→ Vous vendez pendant que vous cuisinez, pendant que vous dormez, tout le temps.</p>
+                  <div className="space-y-3 text-neutral-300">
+                    <p>
+                      → <span className="text-white font-medium">Votre grosse communauté Facebook</span> peut maintenant 
+                      acheter vos livres en 2 clics, sans vous envoyer de message. Chaque publication devient une opportunité de vente directe.
+                    </p>
+                    <p>
+                      → Des lecteurs du Gabon, de France, des États-Unis, du Canada — 
+                      <span className="text-white font-medium"> partout dans le monde</span> — peuvent commander. 
+                      Votre savoir traverse les frontières.
+                    </p>
+                    <p>
+                      → <span className="text-white font-medium">100% des ventes vous reviennent.</span> Sur un livre à 25 000 XAF, 
+                      pas un centime ne part ailleurs. Comparez avec les 30% à 65% que prennent Amazon ou les librairies.
+                    </p>
                   </div>
+                </div>
+
+                {/* Projection : pas que les livres */}
+                <div className="bg-amber-500/5 rounded-2xl p-5 border border-amber-500/20">
+                  <p className="text-amber-300 font-bold text-sm uppercase tracking-wider mb-3">
+                    🔮 Et ce n&apos;est que le début
+                  </p>
+                  <p className="text-neutral-300">
+                    Cette boutique, <span className="text-white font-medium">ce n&apos;est pas seulement pour vos 3 tomes actuels</span>. 
+                    Demain, vous pourrez y vendre vos prochains livres, vos fiches de recettes, 
+                    vos formations en ligne, vos vidéos de cours de cuisine, vos épices, 
+                    vos sauces signature. Chaque connaissance que vous avez peut devenir un produit. 
+                    Votre site devient une plateforme qui monétise tout votre savoir.
+                  </p>
                 </div>
               </div>
 
@@ -443,7 +490,6 @@ export default function ChefOmielPage() {
             ═══════════════════════════════════════════════ */}
         <SectionWrapper id="menu" variant="darker">
           <div className="grid lg:grid-cols-5 gap-8 lg:gap-12 items-center">
-            {/* Texte */}
             <div className="lg:col-span-3 space-y-6">
               <span className="inline-block px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest bg-amber-400/10 text-amber-400 border border-amber-400/20">
                 🍽️ Votre menu en ligne
@@ -451,21 +497,20 @@ export default function ChefOmielPage() {
 
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black leading-tight tracking-tight">
                 Montrez vos plats{" "}
-                <span className="gold-text">avant que les gens n&apos;arrivent</span>
+                <span className="gold-text">avant que les clients n&apos;arrivent</span>
               </h2>
 
-              {/* ─── EXPLICATION SIMPLE MENU ───────────── */}
               <div className="space-y-5 text-base leading-relaxed">
-                {/* Situation actuelle vs future */}
+                {/* Comparaison */}
                 <div className="grid sm:grid-cols-2 gap-4">
                   <div className="bg-red-500/5 rounded-2xl p-4 border border-red-500/20">
                     <p className="text-red-400 font-bold text-sm uppercase tracking-wider mb-2">
-                      ❌ Ce que font les restaurants aujourd&apos;hui
+                      ❌ Ce qui se fait ailleurs
                     </p>
                     <p className="text-neutral-400 text-sm">
-                      Un fichier PDF lourd envoyé par WhatsApp. Des photos floues. 
-                      Des prix écrits sur une ardoise. Le client ne voit pas la qualité 
-                      de ce que vous proposez.
+                      Des PDF lourds envoyés par WhatsApp. Des photos prises avec un vieux téléphone. 
+                      Des prix griffonnés sur une ardoise. Le client ne voit pas la différence 
+                      entre votre plat signature à 15 000 XAF et un plat ordinaire à 3 000 XAF.
                     </p>
                   </div>
                   <div className="bg-green-500/5 rounded-2xl p-4 border border-green-500/20">
@@ -473,9 +518,10 @@ export default function ChefOmielPage() {
                       ✅ Ce qu&apos;on va faire ici
                     </p>
                     <p className="text-neutral-300 text-sm">
-                      De belles photos de chaque plat, prises parmi vos 3000 images. 
-                      Une description qui raconte l&apos;histoire du produit. Le prix affiché 
-                      clairement. Tout se charge vite, même sur un téléphone avec un réseau moyen.
+                      De magnifiques photos de chaque plat, choisies parmi vos 3000 clichés. 
+                      Une description qui raconte l&apos;histoire du produit : d&apos;où il vient, 
+                      pourquoi vous l&apos;avez choisi, comment vous le travaillez. 
+                      Le prix affiché clairement, sans surprise.
                     </p>
                   </div>
                 </div>
@@ -485,18 +531,29 @@ export default function ChefOmielPage() {
                   <p className="text-amber-400 font-bold text-sm uppercase tracking-wider mb-3">
                     📱 Ce que le client voit sur son téléphone
                   </p>
-                  <ul className="space-y-2 text-sm text-neutral-300">
-                    <li className="flex items-start gap-2">
-                      <span className="text-amber-400">📸</span>
-                      <span><span className="text-white font-medium">La photo du plat</span> — en haute définition, qui donne envie.</span>
+                  <ul className="space-y-3 text-neutral-300">
+                    <li className="flex items-start gap-3">
+                      <span className="text-amber-400 text-lg mt-0.5">📸</span>
+                      <span>
+                        <span className="text-white font-medium">La photo du plat</span> — en haute définition, 
+                        avec les textures, les couleurs. Le client a déjà envie de manger avant de venir.
+                      </span>
                     </li>
-                    <li className="flex items-start gap-2">
-                      <span className="text-amber-400">📝</span>
-                      <span><span className="text-white font-medium">Le nom et la description</span> — avec l&apos;histoire du produit local utilisé.</span>
+                    <li className="flex items-start gap-3">
+                      <span className="text-amber-400 text-lg mt-0.5">📝</span>
+                      <span>
+                        <span className="text-white font-medium">L&apos;histoire derrière le plat</span> — 
+                        l&apos;origine du produit local, la technique utilisée, pourquoi ce plat est unique. 
+                        Ce n&apos;est pas juste un menu : c&apos;est une invitation à voyager dans votre univers.
+                      </span>
                     </li>
-                    <li className="flex items-start gap-2">
-                      <span className="text-amber-400">💶</span>
-                      <span><span className="text-white font-medium">Le prix</span> — affiché clairement, sans surprise.</span>
+                    <li className="flex items-start gap-3">
+                      <span className="text-amber-400 text-lg mt-0.5">💶</span>
+                      <span>
+                        <span className="text-white font-medium">Le prix</span> — affiché clairement. 
+                        Quand le client voit la photo et lit l&apos;histoire, le prix devient logique. 
+                        Il ne le discute plus.
+                      </span>
                     </li>
                   </ul>
                 </div>
@@ -506,11 +563,34 @@ export default function ChefOmielPage() {
                   <p className="text-green-400 font-bold text-sm uppercase tracking-wider mb-3">
                     ✅ Ce que ça change pour vous
                   </p>
-                  <div className="space-y-2 text-neutral-300 text-sm">
-                    <p>→ <span className="text-white font-medium">9 clients sur 10</span> regardent le menu sur leur téléphone avant de venir. Avec de belles photos, ils sont déjà convaincus.</p>
-                    <p>→ Quand les gens voient la qualité de vos plats en photo, <span className="text-white font-medium">ils comprennent le prix et ne le discutent pas</span>.</p>
-                    <p>→ Vos serveurs passent moins de temps à expliquer le menu. Ils peuvent se concentrer sur le service.</p>
+                  <div className="space-y-3 text-neutral-300">
+                    <p>
+                      → <span className="text-white font-medium">9 clients sur 10</span> regardent le menu sur leur téléphone avant de réserver. 
+                      Si vos plats sont beaux et bien présentés, ils sont déjà convaincus avant d&apos;arriver.
+                    </p>
+                    <p>
+                      → Vos plats signatures — ceux qui vous rapportent le plus — sont mis en avant. 
+                      Les clients les voient en premier, <span className="text-white font-medium">ils les commandent plus</span>.
+                    </p>
+                    <p>
+                      → Vos serveurs passent moins de temps à expliquer le menu. 
+                      Ils peuvent se concentrer sur le service, suggérer des vins, des desserts. 
+                      <span className="text-white font-medium"> Le panier moyen augmente.</span>
+                    </p>
                   </div>
+                </div>
+
+                {/* Projection */}
+                <div className="bg-amber-500/5 rounded-2xl p-5 border border-amber-500/20">
+                  <p className="text-amber-300 font-bold text-sm uppercase tracking-wider mb-3">
+                    🔮 Imaginez
+                  </p>
+                  <p className="text-neutral-300">
+                    Un couple d&apos;expatriés à Paris prépare son voyage au Gabon. 
+                    Ils cherchent &ldquo;meilleur restaurant Libreville&rdquo;. Ils tombent sur votre menu. 
+                    Ils voient les photos, lisent les histoires des produits. 
+                    <span className="text-white font-medium"> Ils réservent avant même d&apos;avoir pris leur billet d&apos;avion.</span>
+                  </p>
                 </div>
               </div>
 
@@ -556,7 +636,6 @@ export default function ChefOmielPage() {
             ═══════════════════════════════════════════════ */}
         <SectionWrapper id="apropos" variant="dark">
           <div className="grid lg:grid-cols-5 gap-8 lg:gap-12 items-center">
-            {/* Visuel */}
             <div className="lg:col-span-2 order-2 lg:order-1">
               <div className="card-premium gold-border rounded-2xl p-6 text-center space-y-4 gold-glow">
                 <div className="w-16 h-16 mx-auto rounded-full bg-gradient-to-br from-amber-400 to-amber-600 flex items-center justify-center text-neutral-950 font-black text-2xl">
@@ -582,40 +661,52 @@ export default function ChefOmielPage() {
               </div>
             </div>
 
-            {/* Texte */}
             <div className="lg:col-span-3 order-1 lg:order-2 space-y-6">
               <span className="inline-block px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest bg-amber-400/10 text-amber-400 border border-amber-400/20">
                 📖 Qui vous êtes
               </span>
 
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black leading-tight tracking-tight">
-                Raconter votre parcours{" "}
-                <span className="gold-text">pour que les gens comprennent qui vous êtes</span>
+                Votre histoire, vos preuves,{" "}
+                <span className="gold-text">votre crédibilité</span>
               </h2>
 
-              {/* ─── EXPLICATION SIMPLE À PROPOS ───────── */}
               <div className="space-y-5 text-base leading-relaxed">
-                {/* Ce qu'on va mettre */}
+                {/* Ce qu'on va montrer */}
                 <div className="bg-neutral-900/50 rounded-2xl p-5 border border-neutral-800">
                   <p className="text-amber-400 font-bold text-sm uppercase tracking-wider mb-3">
                     📸 Ce qu&apos;on va montrer ici
                   </p>
-                  <ul className="space-y-3 text-sm text-neutral-300">
-                    <li className="flex items-start gap-2">
-                      <span className="text-amber-400">🌍</span>
-                      <span>Vos photos sur le terrain, dans les <span className="text-white font-medium">9 provinces du Gabon</span>.</span>
+                  <ul className="space-y-3 text-neutral-300">
+                    <li className="flex items-start gap-3">
+                      <span className="text-amber-400 text-lg mt-0.5">🌍</span>
+                      <span>
+                        Vos photos sur le terrain, dans les <span className="text-white font-medium">9 provinces du Gabon</span>. 
+                        On voit le travail, la recherche, l&apos;authenticité.
+                      </span>
                     </li>
-                    <li className="flex items-start gap-2">
-                      <span className="text-amber-400">🏛️</span>
-                      <span>Les documents officiels : <span className="text-white font-medium">AGASA</span>, <span className="text-white font-medium">Ministère de l&apos;Éducation Nationale</span>.</span>
+                    <li className="flex items-start gap-3">
+                      <span className="text-amber-400 text-lg mt-0.5">🏛️</span>
+                      <span>
+                        Les documents officiels : <span className="text-white font-medium">AGASA</span>,{" "}
+                        <span className="text-white font-medium">Ministère de l&apos;Éducation Nationale</span>. 
+                        Des preuves, pas des paroles.
+                      </span>
                     </li>
-                    <li className="flex items-start gap-2">
-                      <span className="text-amber-400">📖</span>
-                      <span>L&apos;histoire de vos <span className="text-white font-medium">10 ans de recherche</span> pour les 3 tomes.</span>
+                    <li className="flex items-start gap-3">
+                      <span className="text-amber-400 text-lg mt-0.5">📖</span>
+                      <span>
+                        L&apos;histoire de vos <span className="text-white font-medium">10 ans de recherche</span> pour les 3 tomes. 
+                        Pourquoi vous avez fait ce travail, ce que vous avez découvert.
+                      </span>
                     </li>
-                    <li className="flex items-start gap-2">
-                      <span className="text-amber-400">🤝</span>
-                      <span>Vos partenariats : <span className="text-white font-medium">SOBRAGA</span>, <span className="text-white font-medium">SOVENGAB</span>.</span>
+                    <li className="flex items-start gap-3">
+                      <span className="text-amber-400 text-lg mt-0.5">🤝</span>
+                      <span>
+                        Vos partenariats : <span className="text-white font-medium">SOBRAGA</span>,{" "}
+                        <span className="text-white font-medium">SOVENGAB</span>, et les autres. 
+                        Des noms qui parlent et qui rassurent.
+                      </span>
                     </li>
                   </ul>
                 </div>
@@ -625,11 +716,11 @@ export default function ChefOmielPage() {
                   <p className="text-amber-300 font-bold text-sm uppercase tracking-wider mb-3">
                     💡 Pourquoi c&apos;est important
                   </p>
-                  <p className="text-neutral-300 text-sm">
+                  <p className="text-neutral-300">
                     Quand un client voit tout votre parcours — les 9 provinces, les 10 ans de travail, 
                     les validations officielles — <span className="text-white font-medium">il ne vient pas juste manger</span>. 
-                    Il vient s&apos;asseoir à la table du Chef Omiel. Cette confiance justifie vos prix 
-                    et donne envie de revenir.
+                    Il vient s&apos;asseoir à la table du Chef Omiel. Il accepte vos prix sans discuter. 
+                    Il revient. Il parle de vous à ses amis.
                   </p>
                 </div>
 
@@ -638,9 +729,34 @@ export default function ChefOmielPage() {
                   <p className="text-green-400 font-bold text-sm uppercase tracking-wider mb-3">
                     ✅ Ce que ça change pour vous
                   </p>
-                  <p className="text-neutral-300 text-sm">
-                    Plus votre histoire est visible et crédible, <span className="text-white font-medium">plus votre valeur augmente</span> sur le marché. 
-                    Les clients, les médias et les partenaires vous prennent au sérieux immédiatement.
+                  <div className="space-y-3 text-neutral-300">
+                    <p>
+                      → <span className="text-white font-medium">Des clients plus confiants</span>, qui réservent plus facilement et qui dépensent plus.
+                    </p>
+                    <p>
+                      → <span className="text-white font-medium">Des partenariats plus faciles à décrocher.</span> 
+                      Imaginez : vous rencontrez un sponsor, un média, une institution. Au lieu de leur raconter votre parcours, 
+                      vous leur donnez le lien de votre site. Ils voient tout : les photos, les documents, les preuves. 
+                      Votre site parle pour vous, même quand vous n&apos;êtes pas là.
+                    </p>
+                    <p>
+                      → <span className="text-white font-medium">Une image de marque solide.</span> Vous n&apos;êtes plus 
+                      &ldquo;un cuisinier qui fait des plats&rdquo;. Vous êtes une référence culturelle, 
+                      un ambassadeur du patrimoine gabonais.
+                    </p>
+                  </div>
+                </div>
+
+                {/* Projection */}
+                <div className="bg-amber-500/5 rounded-2xl p-5 border border-amber-500/20">
+                  <p className="text-amber-300 font-bold text-sm uppercase tracking-wider mb-3">
+                    🔮 Imaginez
+                  </p>
+                  <p className="text-neutral-300">
+                    Une institution internationale cherche un chef gabonais pour représenter le pays 
+                    lors d&apos;un événement mondial. Ils tapent votre nom sur Google. Ils arrivent sur votre site. 
+                    Ils voient votre parcours, vos livres, vos preuves, vos photos. 
+                    <span className="text-white font-medium"> Vous êtes le choix évident.</span>
                   </p>
                 </div>
               </div>
@@ -660,7 +776,6 @@ export default function ChefOmielPage() {
             ═══════════════════════════════════════════════ */}
         <SectionWrapper id="reservations" variant="darker">
           <div className="grid lg:grid-cols-5 gap-8 lg:gap-12 items-center">
-            {/* Texte */}
             <div className="lg:col-span-3 space-y-6">
               <span className="inline-block px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest bg-amber-400/10 text-amber-400 border border-amber-400/20">
                 📅 Réservation en ligne
@@ -668,57 +783,67 @@ export default function ChefOmielPage() {
 
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black leading-tight tracking-tight">
                 Les clients réservent tout seuls,{" "}
-                <span className="gold-text">vous restez en cuisine</span>
+                <span className="gold-text">vous restez concentré en cuisine</span>
               </h2>
 
-              {/* ─── EXPLICATION SIMPLE RÉSERVATIONS ───── */}
               <div className="space-y-5 text-base leading-relaxed">
-                {/* Situation actuelle */}
-                <div className="bg-red-500/5 rounded-2xl p-5 border border-red-500/20">
-                  <p className="text-red-400 font-bold text-sm uppercase tracking-wider mb-3">
-                    ❌ Ce qui se passe aujourd&apos;hui
-                  </p>
-                  <p className="text-neutral-300 text-sm">
-                    Le téléphone sonne pendant le service. Vous êtes en train de cuisiner. 
-                    Vous devez vous arrêter, répondre, noter la réservation sur un papier. 
-                    Pendant ce temps, les plats refroidissent. Et quand vous ne répondez pas, 
-                    le client appelle le restaurant d&apos;à côté.
-                  </p>
+                {/* Comparaison */}
+                <div className="grid sm:grid-cols-2 gap-4">
+                  <div className="bg-red-500/5 rounded-2xl p-4 border border-red-500/20">
+                    <p className="text-red-400 font-bold text-sm uppercase tracking-wider mb-2">
+                      ❌ Aujourd&apos;hui
+                    </p>
+                    <p className="text-neutral-400 text-sm">
+                      Le téléphone sonne en plein service. Vous devez vous arrêter, 
+                      vous essuyer les mains, répondre, noter sur un papier. 
+                      Les plats refroidissent. Et quand vous ne répondez pas, 
+                      le client appelle ailleurs.
+                    </p>
+                  </div>
+                  <div className="bg-green-500/5 rounded-2xl p-4 border border-green-500/20">
+                    <p className="text-green-400 font-bold text-sm uppercase tracking-wider mb-2">
+                      ✅ Avec cette page
+                    </p>
+                    <p className="text-neutral-300 text-sm">
+                      Le client réserve directement sur votre site. Il choisit sa date, 
+                      l&apos;heure, le nombre de personnes. Vous recevez la réservation 
+                      sans un seul coup de fil. La cuisine reste calme.
+                    </p>
+                  </div>
                 </div>
 
-                {/* Ce qu'on met en place */}
+                {/* Fonctionnement */}
                 <div className="bg-neutral-900/50 rounded-2xl p-5 border border-neutral-800">
                   <p className="text-amber-400 font-bold text-sm uppercase tracking-wider mb-3">
-                    🧭 Comment ça va marcher
+                    🧭 Comment ça marche
                   </p>
                   <div className="space-y-4">
                     <div className="flex items-start gap-3">
                       <div className="w-8 h-8 rounded-full bg-amber-500/20 border border-amber-500/30 flex items-center justify-center text-amber-400 font-bold text-sm shrink-0">1</div>
                       <div>
                         <p className="text-white font-medium text-sm">Le client arrive sur votre site</p>
-                        <p className="text-neutral-400 text-sm">Il clique sur &ldquo;Réserver&rdquo;.</p>
+                        <p className="text-neutral-400 text-sm">Il clique sur le bouton &ldquo;Réserver&rdquo;. Simple, visible, rapide.</p>
                       </div>
                     </div>
                     <div className="flex items-start gap-3">
                       <div className="w-8 h-8 rounded-full bg-amber-500/20 border border-amber-500/30 flex items-center justify-center text-amber-400 font-bold text-sm shrink-0">2</div>
                       <div>
-                        <p className="text-white font-medium text-sm">Il choisit sa date, l&apos;heure, le nombre de personnes</p>
-                        <p className="text-neutral-400 text-sm">Tout est simple, comme réserver un billet d&apos;avion.</p>
+                        <p className="text-white font-medium text-sm">Il choisit sa date, l&apos;heure, le nombre de couverts</p>
+                        <p className="text-neutral-400 text-sm">Comme réserver un billet d&apos;avion. Tout est clair, tout est fluide.</p>
                       </div>
                     </div>
                     <div className="flex items-start gap-3">
                       <div className="w-8 h-8 rounded-full bg-amber-500/20 border border-amber-500/30 flex items-center justify-center text-amber-400 font-bold text-sm shrink-0">3</div>
                       <div>
                         <p className="text-white font-medium text-sm">Vous recevez la réservation</p>
-                        <p className="text-neutral-400 text-sm">Sur votre tableau de bord, sans un seul coup de téléphone.</p>
+                        <p className="text-neutral-400 text-sm">Sur votre tableau de bord. Sans un seul appel. Sans une seule interruption.</p>
                       </div>
                     </div>
                   </div>
                   <div className="mt-4 pt-4 border-t border-neutral-700/50">
                     <p className="text-amber-300 text-sm font-medium">
-                      💬 Pour les demandes spéciales (groupes, événements privés SOBRAGA, SOVENGAB) 
-                      → un bouton WhatsApp dédié, pour que vous puissiez gérer ces demandes à part, 
-                      quand vous êtes disponible.
+                      💬 Pour les demandes spéciales — groupes, événements privés, partenariats SOBRAGA ou SOVENGAB — 
+                      un bouton WhatsApp Business est là. Ces demandes sont traitées à part, quand vous êtes disponible.
                     </p>
                   </div>
                 </div>
@@ -728,12 +853,36 @@ export default function ChefOmielPage() {
                   <p className="text-green-400 font-bold text-sm uppercase tracking-wider mb-3">
                     ✅ Ce que ça change pour vous
                   </p>
-                  <div className="space-y-2 text-neutral-300 text-sm">
-                    <p>→ <span className="text-white font-medium">Votre téléphone ne sonne plus en cuisine.</span> Vous restez concentré sur vos plats.</p>
-                    <p>→ Les réservations arrivent <span className="text-white font-medium">jour et nuit, même quand le restaurant est fermé</span>.</p>
-                    <p>→ Vous savez exactement combien de tables sont réservées, à quelle heure, et pour combien de personnes.</p>
-                    <p>→ <span className="text-white font-medium">Plus de tables pleines</span> = plus de revenus, sans stress en plus.</p>
+                  <div className="space-y-3 text-neutral-300">
+                    <p>
+                      → <span className="text-white font-medium">Votre téléphone ne sonne plus en cuisine.</span> 
+                      Vous restez concentré sur vos plats. La qualité est constante.
+                    </p>
+                    <p>
+                      → Les réservations arrivent <span className="text-white font-medium">jour et nuit, même quand le restaurant est fermé</span>.
+                    </p>
+                    <p>
+                      → Vous savez exactement combien de tables sont réservées, à quelle heure, pour combien de personnes. 
+                      Vous pilotez votre restaurant avec <span className="text-white font-medium">des vrais chiffres</span>, pas au feeling.
+                    </p>
+                    <p>
+                      → <span className="text-white font-medium">Plus de tables pleines</span> = plus de revenus, 
+                      sans stress supplémentaire pour vous ou votre brigade.
+                    </p>
                   </div>
+                </div>
+
+                {/* Projection */}
+                <div className="bg-amber-500/5 rounded-2xl p-5 border border-amber-500/20">
+                  <p className="text-amber-300 font-bold text-sm uppercase tracking-wider mb-3">
+                    🔮 Imaginez
+                  </p>
+                  <p className="text-neutral-300">
+                    Un samedi soir. La salle est pleine. Les réservations sont arrivées toutes seules 
+                    dans la semaine. Vous êtes en cuisine, concentré, serein. 
+                    Votre brigade tourne parfaitement. Aucun téléphone ne vient casser le rythme. 
+                    <span className="text-white font-medium"> C&apos;est ça, la tranquillité d&apos;un business bien rodé.</span>
+                  </p>
                 </div>
               </div>
             </div>
@@ -795,25 +944,27 @@ export default function ChefOmielPage() {
 
             <p className="text-neutral-300 text-base sm:text-lg leading-relaxed max-w-2xl mx-auto">
               Chaque section que vous venez de voir est prête techniquement. 
-              Il ne manque plus que vos photos, vos vidéos et vos textes pour tout activer.
+              Il ne manque plus que vos photos, vos vidéos et vos textes pour tout activer. 
+              Votre communauté vous attend. Le monde vous attend.
             </p>
 
+            {/* Récapitulatif */}
             <div className="grid sm:grid-cols-2 gap-4 max-w-lg mx-auto text-left">
               <div className="bg-neutral-900/50 rounded-xl p-4 border border-neutral-800">
                 <p className="text-amber-400 font-bold text-sm mb-1">📚 La Boutique</p>
-                <p className="text-neutral-400 text-xs">Vendez vos 3 livres au monde entier, sans commission</p>
+                <p className="text-neutral-400 text-xs">Vos 3 livres, et tous ceux que vous écrirez demain</p>
               </div>
               <div className="bg-neutral-900/50 rounded-xl p-4 border border-neutral-800">
                 <p className="text-amber-400 font-bold text-sm mb-1">🍽️ Le Menu</p>
-                <p className="text-neutral-400 text-xs">Montrez vos plats en photo pour donner envie</p>
+                <p className="text-neutral-400 text-xs">Vos plats en photo, vos prix justifiés, vos clients convaincus</p>
               </div>
               <div className="bg-neutral-900/50 rounded-xl p-4 border border-neutral-800">
                 <p className="text-amber-400 font-bold text-sm mb-1">📖 Votre Histoire</p>
-                <p className="text-neutral-400 text-xs">Votre parcours, vos preuves, votre crédibilité</p>
+                <p className="text-neutral-400 text-xs">Votre parcours, vos preuves, vos futurs partenariats</p>
               </div>
               <div className="bg-neutral-900/50 rounded-xl p-4 border border-neutral-800">
                 <p className="text-amber-400 font-bold text-sm mb-1">📅 Les Réservations</p>
-                <p className="text-neutral-400 text-xs">Les clients réservent tout seuls, 24h/24</p>
+                <p className="text-neutral-400 text-xs">Des tables pleines, un téléphone silencieux, une cuisine sereine</p>
               </div>
             </div>
 
