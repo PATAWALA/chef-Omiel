@@ -213,69 +213,63 @@ export default function ChefOmielPage() {
             {/* Texte */}
             <div className="lg:col-span-3 space-y-6">
               <span className="inline-block px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest bg-amber-400/10 text-amber-400 border border-amber-400/20">
-                Maquette Pédagogique • Section Accueil
+                🏠 La page d&apos;accueil
               </span>
 
               <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-black leading-tight tracking-tight">
-                Chef Omiel,{" "}
-                <span className="gold-text">
-                  votre art ne peut plus dépendre des algorithmes de Facebook
-                </span>
+                Chef Omiel, voici à quoi{" "}
+                <span className="gold-text">votre site web</span>{" "}
+                va ressembler
               </h1>
 
-              {/* ─── COPYWRITING ACCUEIL ──────────────── */}
-              <div className="space-y-5 text-neutral-300 text-base sm:text-lg leading-relaxed">
-                {/* 1. LE PROBLÈME ACTUEL */}
-                <div className="border-l-2 border-red-500/50 pl-4">
-                  <p className="text-red-400 font-bold text-sm uppercase tracking-wider mb-1">
-                    🔴 Le problème actuel
-                  </p>
-                  <p className="text-neutral-400">
-                    Aujourd&apos;hui, votre art dépend d&apos;une plateforme qui ne vous appartient pas. 
-                    Vous publiez une vidéo sur Facebook, et en 48 heures elle est noyée sous des publications 
-                    de chats et de memes. Vos prospects sérieux — ceux qui ont un billet d&apos;avion ou 
-                    une carte bancaire — ne vous trouvent même pas. Pire : <strong className="text-white">chaque jour où votre contenu 
-                    n&apos;est pas visible, c&apos;est un client qui réserve chez un concurrent.</strong>
-                  </p>
-                </div>
+              <p className="text-neutral-400 text-lg">
+                Chaque section que vous voyez ci-dessous est une partie de votre futur site. 
+                Je vous explique tout, simplement.
+              </p>
 
-                {/* 2. LA SOLUTION APPORTÉE */}
-                <div className="border-l-2 border-amber-500/70 pl-4">
-                  <p className="text-amber-400 font-bold text-sm uppercase tracking-wider mb-1">
-                    🟡 La solution
+              {/* ─── EXPLICATION SIMPLE ACCUEIL ────────── */}
+              <div className="space-y-5 text-base leading-relaxed">
+                {/* Ce que vous voyez */}
+                <div className="bg-neutral-900/50 rounded-2xl p-5 border border-neutral-800">
+                  <p className="text-amber-400 font-bold text-sm uppercase tracking-wider mb-3">
+                    👀 Ce que vous regardez en ce moment
                   </p>
                   <p className="text-neutral-300">
-                    Cette page d&apos;accueil est votre <strong className="text-white">vitrine permanente sur Internet</strong> — elle travaille 
-                    24h/24, 7j/7, sans algorithme qui décide qui la voit. Dès qu&apos;un Gabonais 
-                    tape &ldquo;gastronomie gabonaise&rdquo; sur Google, ou qu&apos;un touriste cherche 
-                    &ldquo;chef Libreville&rdquo;, c&apos;est <strong className="text-amber-300">VOUS</strong> qui apparaissez en premier. 
-                    Une vidéo de vous en cuisine avec du Hip-hop en fond, un appel à l&apos;action clair : 
-                    acheter le livre ou réserver une table.
+                    Cette page, c&apos;est <span className="text-white font-semibold">votre page d&apos;accueil</span> — 
+                    la première chose que les gens verront en tapant votre nom sur Google.
                   </p>
                 </div>
 
-                {/* 3. LE GAIN CONCRET */}
-                <div className="border-l-2 border-green-500/70 pl-4">
-                  <p className="text-green-400 font-bold text-sm uppercase tracking-wider mb-1">
-                    🟢 Le gain concret
+                {/* Ce qu'on met dedans */}
+                <div className="bg-neutral-900/50 rounded-2xl p-5 border border-neutral-800">
+                  <p className="text-amber-400 font-bold text-sm uppercase tracking-wider mb-3">
+                    🎥 Ce qu&apos;on va mettre ici
+                  </p>
+                  <ul className="space-y-2 text-neutral-300">
+                    <li className="flex items-start gap-2">
+                      <span className="text-amber-400">1.</span>
+                      <span><span className="text-white font-medium">Une vidéo de vous en cuisine</span> — avec votre musique Hip-hop en fond, pour que les gens ressentent votre univers en 3 secondes.</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-amber-400">2.</span>
+                      <span><span className="text-white font-medium">Un message clair</span> qui dit qui vous êtes et ce que vous proposez.</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-amber-400">3.</span>
+                      <span><span className="text-white font-medium">Des boutons</span> qui dirigent les gens vers vos livres ou vos réservations.</span>
+                    </li>
+                  </ul>
+                </div>
+
+                {/* Résultat */}
+                <div className="bg-green-500/5 rounded-2xl p-5 border border-green-500/20">
+                  <p className="text-green-400 font-bold text-sm uppercase tracking-wider mb-3">
+                    ✅ Le résultat pour vous
                   </p>
                   <p className="text-neutral-300">
-                    Un site bien référencé génère <strong className="text-white">en moyenne 3 à 5 fois plus de contacts qualifiés</strong> 
-                    qu&apos;une page Facebook. Pour vous, cela signifie : des clients qui arrivent déjà 
-                    convaincus, prêts à payer vos prix premium, sans que vous ayez à négocier dans les 
-                    messages privés. <strong className="text-green-300">Votre notoriété se transforme en machine à cash, automatiquement.</strong>
-                  </p>
-                </div>
-
-                {/* 4. L'EFFET CHOC */}
-                <div className="border-l-2 border-amber-400 pl-4 bg-amber-400/5 rounded-r-lg p-3">
-                  <p className="text-amber-300 font-bold text-sm uppercase tracking-wider mb-1">
-                    ⚡ L&apos;effet choc
-                  </p>
-                  <p className="text-white font-semibold">
-                    Refuser d&apos;avoir une vitrine professionnelle en 2026, c&apos;est accepter 
-                    volontairement de rester invisible pendant que vos concurrents captent vos clients. 
-                    <span className="gold-text font-black"> Votre talent mérite mieux qu&apos;un algorithme capricieux.</span>
+                    Quand un Gabonais ou un touriste cherche &ldquo;gastronomie gabonaise&rdquo; sur Google, 
+                    <span className="text-white font-medium"> c&apos;est vous qu&apos;il trouve en premier</span>. 
+                    Plus besoin de dépendre de Facebook pour être visible.
                   </p>
                 </div>
               </div>
@@ -304,9 +298,10 @@ export default function ChefOmielPage() {
                   <div className="w-20 h-20 rounded-full bg-gradient-to-br from-amber-400 to-amber-600 flex items-center justify-center text-neutral-950 font-black text-3xl mb-4 shadow-lg shadow-amber-500/30">
                     CO
                   </div>
-                  <p className="text-amber-300 font-semibold text-lg">Vidéo Hero</p>
-                  <p className="text-neutral-500 text-sm mt-2">
-                    Vous en cuisine • Hip-hop • 3 secondes pour impacter
+                  <p className="text-amber-300 font-semibold text-lg">📹 Votre vidéo ici</p>
+                  <p className="text-neutral-400 text-sm mt-2">
+                    On met une vidéo de vous en cuisine, avec votre musique, 
+                    pour que les visiteurs ressentent tout de suite votre énergie
                   </p>
                 </div>
               </div>
@@ -321,13 +316,16 @@ export default function ChefOmielPage() {
           <div className="grid lg:grid-cols-5 gap-8 lg:gap-12 items-center">
             {/* Visuel */}
             <div className="lg:col-span-2 order-2 lg:order-1">
+              <p className="text-amber-400 font-bold text-xs uppercase tracking-widest mb-3 text-center lg:text-left">
+                📚 Comment vos livres seront présentés
+              </p>
               <div className="space-y-4">
                 {[1, 2, 3].map((tome) => (
                   <div
                     key={tome}
                     className="card-premium gold-border rounded-xl p-5 flex items-center gap-4"
                   >
-                    <div className="w-14 h-18 rounded-lg bg-gradient-to-br from-amber-500/20 to-amber-700/10 border border-amber-500/20 flex items-center justify-center text-amber-400 font-black text-xl">
+                    <div className="w-14 h-18 rounded-lg bg-gradient-to-br from-amber-500/20 to-amber-700/10 border border-amber-500/20 flex items-center justify-center text-amber-400 font-black text-xl shrink-0">
                       T{tome}
                     </div>
                     <div>
@@ -346,79 +344,87 @@ export default function ChefOmielPage() {
             {/* Texte */}
             <div className="lg:col-span-3 order-1 lg:order-2 space-y-6">
               <span className="inline-block px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest bg-amber-400/10 text-amber-400 border border-amber-400/20">
-                🛍️ Section Boutique
+                🛍️ Votre boutique en ligne
               </span>
 
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black leading-tight tracking-tight">
-                Votre Boutique E-commerce{" "}
-                <span className="gold-text">Indépendante</span>
+                Un endroit rien qu&apos;à vous{" "}
+                <span className="gold-text">pour vendre vos 3 livres</span>
               </h2>
-              <p className="text-neutral-400 text-lg font-medium">
-                Sans intermédiaires. 100% de vos revenus dans votre poche.
-              </p>
 
-              {/* ─── COPYWRITING BOUTIQUE ─────────────── */}
-              <div className="space-y-5 text-neutral-300 text-base sm:text-lg leading-relaxed">
-                {/* 1. LE PROBLÈME ACTUEL */}
-                <div className="border-l-2 border-red-500/50 pl-4">
-                  <p className="text-red-400 font-bold text-sm uppercase tracking-wider mb-1">
-                    🔴 Le problème actuel
-                  </p>
-                  <p className="text-neutral-400">
-                    Chef, soyons honnêtes : quand quelqu&apos;un veut acheter votre livre aujourd&apos;hui, 
-                    que se passe-t-il ? Il doit vous envoyer un message privé sur Facebook, vous devez 
-                    répondre manuellement, négocier le prix, organiser le paiement par Mobile Money, 
-                    puis gérer la livraison du PDF ou du livre physique. <strong className="text-white">C&apos;est épuisant, 
-                    lent, et ça tue vos ventes.</strong> Chaque friction dans ce processus = un acheteur 
-                    qui abandonne. Amazon ou les librairies prennent 30% à 65% de commission sur 
-                    chaque vente. Sur un livre à 25 000 XAF, vous perdez entre 7 500 et 16 250 XAF 
-                    <strong className="text-red-300"> par exemplaire vendu</strong>.
-                  </p>
+              {/* ─── EXPLICATION SIMPLE BOUTIQUE ────────── */}
+              <div className="space-y-5 text-base leading-relaxed">
+                {/* Situation actuelle vs future */}
+                <div className="grid sm:grid-cols-2 gap-4">
+                  <div className="bg-red-500/5 rounded-2xl p-4 border border-red-500/20">
+                    <p className="text-red-400 font-bold text-sm uppercase tracking-wider mb-2">
+                      ❌ Aujourd&apos;hui
+                    </p>
+                    <p className="text-neutral-400 text-sm">
+                      Les gens vous envoient des messages privés sur Facebook pour commander. 
+                      Vous devez répondre à chaque personne, organiser le paiement, envoyer le PDF. 
+                      C&apos;est long et ça vous prend du temps.
+                    </p>
+                  </div>
+                  <div className="bg-green-500/5 rounded-2xl p-4 border border-green-500/20">
+                    <p className="text-green-400 font-bold text-sm uppercase tracking-wider mb-2">
+                      ✅ Avec cette boutique
+                    </p>
+                    <p className="text-neutral-300 text-sm">
+                      Le client arrive, clique sur &ldquo;Acheter&rdquo;, paie avec son téléphone 
+                      (Airtel Money, Moov Money, Carte Bancaire), et reçoit le livre automatiquement. 
+                      Vous ne faites rien. Le système travaille pour vous.
+                    </p>
+                  </div>
                 </div>
 
-                {/* 2. LA SOLUTION APPORTÉE */}
-                <div className="border-l-2 border-amber-500/70 pl-4">
-                  <p className="text-amber-400 font-bold text-sm uppercase tracking-wider mb-1">
-                    🟡 La solution
+                {/* Fonctionnement */}
+                <div className="bg-neutral-900/50 rounded-2xl p-5 border border-neutral-800">
+                  <p className="text-amber-400 font-bold text-sm uppercase tracking-wider mb-3">
+                    🧭 Comment ça marche, étape par étape
                   </p>
-                  <p className="text-neutral-300">
-                    Cette section est <strong className="text-white">votre propre boutique en ligne, indépendante de toute plateforme</strong>. 
-                    Le client arrive ici, voit vos 3 tomes magnifiquement présentés avec 
-                    vos 3000 photos, clique sur &ldquo;Précommander&rdquo;, et paie en 30 secondes — 
-                    par Mobile Money (Airtel Money, Moov Money), par Carte Bancaire (Visa, Mastercard), 
-                    ou même PayPal pour vos acheteurs en France, aux États-Unis ou au Canada. 
-                    <strong className="text-amber-300"> Zéro intermédiaire. Zéro commission.</strong> Le fichier PDF est livré automatiquement 
-                    par email. Les livres physiques déclenchent une notification pour l&apos;expédition.
-                  </p>
+                  <div className="space-y-4">
+                    <div className="flex items-start gap-3">
+                      <div className="w-8 h-8 rounded-full bg-amber-500/20 border border-amber-500/30 flex items-center justify-center text-amber-400 font-bold text-sm shrink-0">1</div>
+                      <div>
+                        <p className="text-white font-medium text-sm">Le client voit vos livres</p>
+                        <p className="text-neutral-400 text-sm">Les 3 tomes sont affichés avec leurs couvertures et le prix.</p>
+                      </div>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <div className="w-8 h-8 rounded-full bg-amber-500/20 border border-amber-500/30 flex items-center justify-center text-amber-400 font-bold text-sm shrink-0">2</div>
+                      <div>
+                        <p className="text-white font-medium text-sm">Il clique sur &ldquo;Précommander&rdquo;</p>
+                        <p className="text-neutral-400 text-sm">Le livre s&apos;ajoute au panier, comme sur n&apos;importe quelle boutique en ligne.</p>
+                      </div>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <div className="w-8 h-8 rounded-full bg-amber-500/20 border border-amber-500/30 flex items-center justify-center text-amber-400 font-bold text-sm shrink-0">3</div>
+                      <div>
+                        <p className="text-white font-medium text-sm">Il paie avec son téléphone</p>
+                        <p className="text-neutral-400 text-sm">Mobile Money, Carte Bancaire, ou PayPal pour l&apos;étranger. Tout est automatique.</p>
+                      </div>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <div className="w-8 h-8 rounded-full bg-amber-500/20 border border-amber-500/30 flex items-center justify-center text-amber-400 font-bold text-sm shrink-0">4</div>
+                      <div>
+                        <p className="text-white font-medium text-sm">Le livre est livré tout seul</p>
+                        <p className="text-neutral-400 text-sm">PDF envoyé par email instantanément. Livre physique : vous recevez une notification pour l&apos;expédition.</p>
+                      </div>
+                    </div>
+                  </div>
                 </div>
 
-                {/* 3. LE GAIN CONCRET */}
-                <div className="border-l-2 border-green-500/70 pl-4">
-                  <p className="text-green-400 font-bold text-sm uppercase tracking-wider mb-1">
-                    🟢 Le gain concret
+                {/* Résultat */}
+                <div className="bg-green-500/5 rounded-2xl p-5 border border-green-500/20">
+                  <p className="text-green-400 font-bold text-sm uppercase tracking-wider mb-3">
+                    ✅ Ce que ça change pour vous
                   </p>
-                  <p className="text-neutral-300">
-                    Faisons le calcul ensemble. Supposons que vous vendiez 500 exemplaires 
-                    du Tome 1 à 25 000 XAF. Avec Amazon, vous garderiez environ 8 750 XAF 
-                    par livre (35% de commission). <strong className="text-white">Avec votre boutique indépendante, 
-                    vous gardez la totalité : 25 000 XAF × 500 = 12 500 000 XAF dans votre poche</strong>, 
-                    contre 4 375 000 XAF avec Amazon. <strong className="text-green-300">C&apos;est 8 125 000 XAF de différence. 
-                    Sur un seul tome.</strong> Multipliez par 3 tomes. Multipliez par les réassorts. 
-                    <span className="text-white font-bold"> Cet argent dort actuellement chez vos concurrents.</span>
-                  </p>
-                </div>
-
-                {/* 4. L'EFFET CHOC */}
-                <div className="border-l-2 border-amber-400 pl-4 bg-amber-400/5 rounded-r-lg p-3">
-                  <p className="text-amber-300 font-bold text-sm uppercase tracking-wider mb-1">
-                    ⚡ L&apos;effet choc
-                  </p>
-                  <p className="text-white font-semibold">
-                    Vendre vos livres via des MP Facebook en 2026, c&apos;est comme cuisiner 
-                    avec un feu de bois pendant que vos concurrents utilisent l&apos;induction. 
-                    <span className="gold-text font-black"> Chaque jour sans boutique en ligne est un jour où vous offrez 
-                    volontairement 65% de votre valeur à des géants américains.</span>
-                  </p>
+                  <div className="space-y-2 text-neutral-300 text-sm">
+                    <p>→ Des gens du Gabon, de France, des États-Unis ou du Canada peuvent acheter vos livres <span className="text-white font-medium">jour et nuit, sans que vous leviez le petit doigt</span>.</p>
+                    <p>→ <span className="text-white font-medium">100% de l&apos;argent vous revient.</span> Pas de commission à Amazon ou aux librairies.</p>
+                    <p>→ Vous vendez pendant que vous cuisinez, pendant que vous dormez, tout le temps.</p>
+                  </div>
                 </div>
               </div>
 
@@ -426,7 +432,7 @@ export default function ChefOmielPage() {
                 onClick={() => scrollToSection("menu")}
                 className="px-6 py-3.5 bg-amber-500/10 text-amber-400 font-bold rounded-xl border border-amber-400/20 hover:bg-amber-500/20 hover:border-amber-400/40 transition-all duration-300 active:scale-95"
               >
-                Section suivante : Le Menu Digital →
+                Voir le Menu Digital →
               </button>
             </div>
           </div>
@@ -440,78 +446,71 @@ export default function ChefOmielPage() {
             {/* Texte */}
             <div className="lg:col-span-3 space-y-6">
               <span className="inline-block px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest bg-amber-400/10 text-amber-400 border border-amber-400/20">
-                🍽️ Section Menu Digital
+                🍽️ Votre menu en ligne
               </span>
 
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black leading-tight tracking-tight">
-                Le Menu Interactif :{" "}
-                <span className="gold-text">
-                  L&apos;expérience culinaire avant la salle
-                </span>
+                Montrez vos plats{" "}
+                <span className="gold-text">avant que les gens n&apos;arrivent</span>
               </h2>
 
-              {/* ─── COPYWRITING MENU ─────────────────── */}
-              <div className="space-y-5 text-neutral-300 text-base sm:text-lg leading-relaxed">
-                {/* 1. LE PROBLÈME ACTUEL */}
-                <div className="border-l-2 border-red-500/50 pl-4">
-                  <p className="text-red-400 font-bold text-sm uppercase tracking-wider mb-1">
-                    🔴 Le problème actuel
-                  </p>
-                  <p className="text-neutral-400">
-                    Chef, comment vos clients découvrent-ils votre menu aujourd&apos;hui ? 
-                    Un PDF de 15 Mo envoyé par WhatsApp qui met 2 minutes à charger. 
-                    Une photo floue prise avec un téléphone en 2019. Des prix écrits à la main 
-                    sur une ardoise que personne ne voit. Résultat : <strong className="text-white">le client haut de gamme 
-                    — celui qui dépense 50 000 XAF par tête — ne perçoit pas la valeur de votre art.</strong> 
-                    Il compare votre plat à 15 000 XAF avec un &ldquo;Ndolè à 3000 XAF&rdquo; 
-                    du coin de la rue, parce qu&apos;il ne voit pas la différence. 
-                    <strong className="text-red-300"> Vous perdez la bataille de la perception avant même qu&apos;il franchisse la porte.</strong>
-                  </p>
+              {/* ─── EXPLICATION SIMPLE MENU ───────────── */}
+              <div className="space-y-5 text-base leading-relaxed">
+                {/* Situation actuelle vs future */}
+                <div className="grid sm:grid-cols-2 gap-4">
+                  <div className="bg-red-500/5 rounded-2xl p-4 border border-red-500/20">
+                    <p className="text-red-400 font-bold text-sm uppercase tracking-wider mb-2">
+                      ❌ Ce que font les restaurants aujourd&apos;hui
+                    </p>
+                    <p className="text-neutral-400 text-sm">
+                      Un fichier PDF lourd envoyé par WhatsApp. Des photos floues. 
+                      Des prix écrits sur une ardoise. Le client ne voit pas la qualité 
+                      de ce que vous proposez.
+                    </p>
+                  </div>
+                  <div className="bg-green-500/5 rounded-2xl p-4 border border-green-500/20">
+                    <p className="text-green-400 font-bold text-sm uppercase tracking-wider mb-2">
+                      ✅ Ce qu&apos;on va faire ici
+                    </p>
+                    <p className="text-neutral-300 text-sm">
+                      De belles photos de chaque plat, prises parmi vos 3000 images. 
+                      Une description qui raconte l&apos;histoire du produit. Le prix affiché 
+                      clairement. Tout se charge vite, même sur un téléphone avec un réseau moyen.
+                    </p>
+                  </div>
                 </div>
 
-                {/* 2. LA SOLUTION APPORTÉE */}
-                <div className="border-l-2 border-amber-500/70 pl-4">
-                  <p className="text-amber-400 font-bold text-sm uppercase tracking-wider mb-1">
-                    🟡 La solution
+                {/* Ce que le client voit */}
+                <div className="bg-neutral-900/50 rounded-2xl p-5 border border-neutral-800">
+                  <p className="text-amber-400 font-bold text-sm uppercase tracking-wider mb-3">
+                    📱 Ce que le client voit sur son téléphone
                   </p>
-                  <p className="text-neutral-300">
-                    On remplace le PDF moch par <strong className="text-white">une expérience visuelle immersive</strong>. 
-                    Chaque plat est présenté avec une photo professionnelle en haute définition 
-                    (issue de vos 3000 images), une description qui raconte l&apos;histoire du 
-                    produit local utilisé, son origine, votre technique. Le client fait défiler 
-                    le menu comme il ferait défiler Instagram — <strong className="text-amber-300">sauf qu&apos;ici, c&apos;est 
-                    VOTRE univers, sans distraction, sans pub concurrente.</strong> Chaque image 
-                    est optimisée pour charger en moins d&apos;une seconde, même en connexion 3G 
-                    au fin fond du Gabon.
-                  </p>
+                  <ul className="space-y-2 text-sm text-neutral-300">
+                    <li className="flex items-start gap-2">
+                      <span className="text-amber-400">📸</span>
+                      <span><span className="text-white font-medium">La photo du plat</span> — en haute définition, qui donne envie.</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-amber-400">📝</span>
+                      <span><span className="text-white font-medium">Le nom et la description</span> — avec l&apos;histoire du produit local utilisé.</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-amber-400">💶</span>
+                      <span><span className="text-white font-medium">Le prix</span> — affiché clairement, sans surprise.</span>
+                    </li>
+                  </ul>
                 </div>
 
-                {/* 3. LE GAIN CONCRET */}
-                <div className="border-l-2 border-green-500/70 pl-4">
-                  <p className="text-green-400 font-bold text-sm uppercase tracking-wider mb-1">
-                    🟢 Le gain concret
+                {/* Résultat */}
+                <div className="bg-green-500/5 rounded-2xl p-5 border border-green-500/20">
+                  <p className="text-green-400 font-bold text-sm uppercase tracking-wider mb-3">
+                    ✅ Ce que ça change pour vous
                   </p>
-                  <p className="text-neutral-300">
-                    <strong className="text-white">89% des clients premium consultent le menu sur leur téléphone 
-                    avant de réserver.</strong> Quand ils voient vos plats magnifiés, avec des 
-                    ingrédients sourcés et une présentation qui respire le luxe, leur cerveau 
-                    accepte le prix avant même d&apos;arriver. <strong className="text-green-300">Résultat : vous vendez plus 
-                    de plats signature à forte marge, et vous réduisez les questions 
-                    &ldquo;c&apos;est quoi ce plat ?&rdquo; de 70%.</strong> Vos serveurs passent moins de temps 
-                    à expliquer, plus de temps à vendre des bouteilles de vin et des desserts.
-                  </p>
-                </div>
-
-                {/* 4. L'EFFET CHOC */}
-                <div className="border-l-2 border-amber-400 pl-4 bg-amber-400/5 rounded-r-lg p-3">
-                  <p className="text-amber-300 font-bold text-sm uppercase tracking-wider mb-1">
-                    ⚡ L&apos;effet choc
-                  </p>
-                  <p className="text-white font-semibold">
-                    Un menu invisible ou mal présenté est un vendeur muet dans votre propre restaurant. 
-                    <span className="gold-text font-black"> Pendant que vous laissez vos clients deviner la valeur de votre travail, 
-                    vos concurrents, eux, la prouvent en une image.</span>
-                  </p>
+                  <div className="space-y-2 text-neutral-300 text-sm">
+                    <p>→ <span className="text-white font-medium">9 clients sur 10</span> regardent le menu sur leur téléphone avant de venir. Avec de belles photos, ils sont déjà convaincus.</p>
+                    <p>→ Quand les gens voient la qualité de vos plats en photo, <span className="text-white font-medium">ils comprennent le prix et ne le discutent pas</span>.</p>
+                    <p>→ Vos serveurs passent moins de temps à expliquer le menu. Ils peuvent se concentrer sur le service.</p>
+                  </div>
                 </div>
               </div>
 
@@ -519,7 +518,7 @@ export default function ChefOmielPage() {
                 onClick={() => scrollToSection("apropos")}
                 className="px-6 py-3.5 bg-amber-500/10 text-amber-400 font-bold rounded-xl border border-amber-400/20 hover:bg-amber-500/20 hover:border-amber-400/40 transition-all duration-300 active:scale-95"
               >
-                Section suivante : Votre Histoire →
+                Voir votre Histoire →
               </button>
             </div>
 
@@ -527,7 +526,7 @@ export default function ChefOmielPage() {
             <div className="lg:col-span-2">
               <div className="card-premium gold-border rounded-2xl p-5 space-y-4 gold-glow">
                 <p className="text-amber-400 font-bold text-sm text-center uppercase tracking-widest">
-                  Aperçu Menu
+                  Voici à quoi ressemble le menu
                 </p>
                 {[
                   { nom: "Poisson braisé & Légumes oubliés", prix: "12 000 XAF" },
@@ -586,75 +585,62 @@ export default function ChefOmielPage() {
             {/* Texte */}
             <div className="lg:col-span-3 order-1 lg:order-2 space-y-6">
               <span className="inline-block px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest bg-amber-400/10 text-amber-400 border border-amber-400/20">
-                📖 Section À Propos
+                📖 Qui vous êtes
               </span>
 
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black leading-tight tracking-tight">
-                Votre Histoire : De créateur culinaire{" "}
-                <span className="gold-text">à icône culturelle</span>
+                Raconter votre parcours{" "}
+                <span className="gold-text">pour que les gens comprennent qui vous êtes</span>
               </h2>
 
-              {/* ─── COPYWRITING À PROPOS ─────────────── */}
-              <div className="space-y-5 text-neutral-300 text-base sm:text-lg leading-relaxed">
-                {/* 1. LE PROBLÈME ACTUEL */}
-                <div className="border-l-2 border-red-500/50 pl-4">
-                  <p className="text-red-400 font-bold text-sm uppercase tracking-wider mb-1">
-                    🔴 Le problème actuel
+              {/* ─── EXPLICATION SIMPLE À PROPOS ───────── */}
+              <div className="space-y-5 text-base leading-relaxed">
+                {/* Ce qu'on va mettre */}
+                <div className="bg-neutral-900/50 rounded-2xl p-5 border border-neutral-800">
+                  <p className="text-amber-400 font-bold text-sm uppercase tracking-wider mb-3">
+                    📸 Ce qu&apos;on va montrer ici
                   </p>
-                  <p className="text-neutral-400">
-                    Chef, tapez votre nom sur Google. Qu&apos;est-ce qui apparaît ? Un profil 
-                    Facebook incomplet. Une photo de vous à un événement en 2021. Des articles 
-                    éparpillés que vous ne contrôlez pas. Pendant ce temps, un client potentiel 
-                    — un expatrié qui veut organiser un dîner d&apos;affaires à 500 000 XAF, 
-                    un touriste qui planifie son voyage au Gabon — cherche à savoir <strong className="text-white">
-                    qui vous êtes vraiment</strong>. Ce qu&apos;il trouve ne reflète ni l&apos;ampleur 
-                    de vos 10 ans de recherche, ni la caution de l&apos;AGASA, ni votre mission 
-                    de transmission. <strong className="text-red-300">Votre crédibilité est floue, donc votre valeur 
-                    perçue est floue.</strong>
+                  <ul className="space-y-3 text-sm text-neutral-300">
+                    <li className="flex items-start gap-2">
+                      <span className="text-amber-400">🌍</span>
+                      <span>Vos photos sur le terrain, dans les <span className="text-white font-medium">9 provinces du Gabon</span>.</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-amber-400">🏛️</span>
+                      <span>Les documents officiels : <span className="text-white font-medium">AGASA</span>, <span className="text-white font-medium">Ministère de l&apos;Éducation Nationale</span>.</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-amber-400">📖</span>
+                      <span>L&apos;histoire de vos <span className="text-white font-medium">10 ans de recherche</span> pour les 3 tomes.</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-amber-400">🤝</span>
+                      <span>Vos partenariats : <span className="text-white font-medium">SOBRAGA</span>, <span className="text-white font-medium">SOVENGAB</span>.</span>
+                    </li>
+                  </ul>
+                </div>
+
+                {/* Pourquoi c'est important */}
+                <div className="bg-amber-500/5 rounded-2xl p-5 border border-amber-500/20">
+                  <p className="text-amber-300 font-bold text-sm uppercase tracking-wider mb-3">
+                    💡 Pourquoi c&apos;est important
+                  </p>
+                  <p className="text-neutral-300 text-sm">
+                    Quand un client voit tout votre parcours — les 9 provinces, les 10 ans de travail, 
+                    les validations officielles — <span className="text-white font-medium">il ne vient pas juste manger</span>. 
+                    Il vient s&apos;asseoir à la table du Chef Omiel. Cette confiance justifie vos prix 
+                    et donne envie de revenir.
                   </p>
                 </div>
 
-                {/* 2. LA SOLUTION APPORTÉE */}
-                <div className="border-l-2 border-amber-500/70 pl-4">
-                  <p className="text-amber-400 font-bold text-sm uppercase tracking-wider mb-1">
-                    🟡 La solution
+                {/* Résultat */}
+                <div className="bg-green-500/5 rounded-2xl p-5 border border-green-500/20">
+                  <p className="text-green-400 font-bold text-sm uppercase tracking-wider mb-3">
+                    ✅ Ce que ça change pour vous
                   </p>
-                  <p className="text-neutral-300">
-                    Cette section raconte <strong className="text-white">votre légende</strong>. Photos sur le terrain 
-                    dans les 9 provinces du Gabon. Votre démarche scientifique et culturelle. 
-                    Les validations officielles : AGASA, Ministère de l&apos;Éducation Nationale, 
-                    vos partenariats avec SOBRAGA ou SOVENGAB. Chaque élément est présenté 
-                    comme une pièce à conviction qui construit votre statut d&apos;autorité. 
-                    <strong className="text-amber-300"> Ce n&apos;est pas une bio. C&apos;est un dossier de presse permanent 
-                    qui travaille pour vous.</strong>
-                  </p>
-                </div>
-
-                {/* 3. LE GAIN CONCRET */}
-                <div className="border-l-2 border-green-500/70 pl-4">
-                  <p className="text-green-400 font-bold text-sm uppercase tracking-wider mb-1">
-                    🟢 Le gain concret
-                  </p>
-                  <p className="text-neutral-300">
-                    Quand un client perçoit la profondeur de votre parcours, il ne négocie plus vos prix. 
-                    <strong className="text-white"> Il ne vient pas juste manger un plat : il vient s&apos;asseoir à la table 
-                    du Chef Omiel.</strong> Cette perception justifie des prix 30% à 50% supérieurs 
-                    à la moyenne du marché. Un dîner privé passe de 25 000 XAF à 50 000 XAF par tête. 
-                    <strong className="text-green-300"> Votre histoire forte = votre ticket pour le segment luxe.</strong> 
-                    Les médias, les institutions, les sponsors vous trouvent crédible en un clic.
-                  </p>
-                </div>
-
-                {/* 4. L'EFFET CHOC */}
-                <div className="border-l-2 border-amber-400 pl-4 bg-amber-400/5 rounded-r-lg p-3">
-                  <p className="text-amber-300 font-bold text-sm uppercase tracking-wider mb-1">
-                    ⚡ L&apos;effet choc
-                  </p>
-                  <p className="text-white font-semibold">
-                    Avoir un parcours exceptionnel et ne pas le mettre en scène, c&apos;est comme 
-                    posséder un diamant brut et le laisser dans un tiroir. 
-                    <span className="gold-text font-black"> Vos concurrents ne sont pas meilleurs que vous. 
-                    Ils sont juste plus visibles.</span>
+                  <p className="text-neutral-300 text-sm">
+                    Plus votre histoire est visible et crédible, <span className="text-white font-medium">plus votre valeur augmente</span> sur le marché. 
+                    Les clients, les médias et les partenaires vous prennent au sérieux immédiatement.
                   </p>
                 </div>
               </div>
@@ -663,7 +649,7 @@ export default function ChefOmielPage() {
                 onClick={() => scrollToSection("reservations")}
                 className="px-6 py-3.5 bg-amber-500/10 text-amber-400 font-bold rounded-xl border border-amber-400/20 hover:bg-amber-500/20 hover:border-amber-400/40 transition-all duration-300 active:scale-95"
               >
-                Section suivante : Réservations →
+                Voir les Réservations →
               </button>
             </div>
           </div>
@@ -677,77 +663,77 @@ export default function ChefOmielPage() {
             {/* Texte */}
             <div className="lg:col-span-3 space-y-6">
               <span className="inline-block px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest bg-amber-400/10 text-amber-400 border border-amber-400/20">
-                📅 Section Réservations
+                📅 Réservation en ligne
               </span>
 
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black leading-tight tracking-tight">
-                Réservations Automatiques{" "}
-                <span className="gold-text">Zéro friction, moins de stress</span>
+                Les clients réservent tout seuls,{" "}
+                <span className="gold-text">vous restez en cuisine</span>
               </h2>
 
-              {/* ─── COPYWRITING RÉSERVATIONS ─────────── */}
-              <div className="space-y-5 text-neutral-300 text-base sm:text-lg leading-relaxed">
-                {/* 1. LE PROBLÈME ACTUEL */}
-                <div className="border-l-2 border-red-500/50 pl-4">
-                  <p className="text-red-400 font-bold text-sm uppercase tracking-wider mb-1">
-                    🔴 Le problème actuel
+              {/* ─── EXPLICATION SIMPLE RÉSERVATIONS ───── */}
+              <div className="space-y-5 text-base leading-relaxed">
+                {/* Situation actuelle */}
+                <div className="bg-red-500/5 rounded-2xl p-5 border border-red-500/20">
+                  <p className="text-red-400 font-bold text-sm uppercase tracking-wider mb-3">
+                    ❌ Ce qui se passe aujourd&apos;hui
                   </p>
-                  <p className="text-neutral-400">
-                    Chef, imaginez la scène : vous êtes en plein coup de feu. Les sauces 
-                    mijotent, le poisson doit être retourné, votre brigade est synchronisée. 
-                    Et soudain, <strong className="text-white">le téléphone sonne</strong>. Une réservation. Vous devez 
-                    vous arrêter, vous essuyer les mains, répondre, noter sur un papier, 
-                    vérifier le carnet. Pendant ces 3 minutes, vos plats refroidissent, 
-                    le rythme casse, la qualité baisse. Et quand vous ne répondez pas ? 
-                    <strong className="text-red-300"> Ce client appelle le restaurant d&apos;à côté.</strong> Chaque appel manqué 
-                    est une table vide et un billet qui s&apos;envole.
+                  <p className="text-neutral-300 text-sm">
+                    Le téléphone sonne pendant le service. Vous êtes en train de cuisiner. 
+                    Vous devez vous arrêter, répondre, noter la réservation sur un papier. 
+                    Pendant ce temps, les plats refroidissent. Et quand vous ne répondez pas, 
+                    le client appelle le restaurant d&apos;à côté.
                   </p>
                 </div>
 
-                {/* 2. LA SOLUTION APPORTÉE */}
-                <div className="border-l-2 border-amber-500/70 pl-4">
-                  <p className="text-amber-400 font-bold text-sm uppercase tracking-wider mb-1">
-                    🟡 La solution
+                {/* Ce qu'on met en place */}
+                <div className="bg-neutral-900/50 rounded-2xl p-5 border border-neutral-800">
+                  <p className="text-amber-400 font-bold text-sm uppercase tracking-wider mb-3">
+                    🧭 Comment ça va marcher
                   </p>
-                  <p className="text-neutral-300">
-                    Un système de réservation en ligne, intégré directement dans cette page. 
-                    Le client choisit sa date, son nombre de couverts, son créneau horaire, 
-                    et <strong className="text-white">tout arrive automatiquement dans votre tableau de bord</strong> — 
-                    sans un seul coup de téléphone. Pour les demandes spécifiques (groupes, 
-                    événements privés SOBRAGA ou SOVENGAB), un bouton WhatsApp Business 
-                    redirige vers une conversation structurée avec des réponses automatiques. 
-                    <strong className="text-amber-300"> Votre téléphone passe du statut de &ldquo;perturbateur culinaire&rdquo; 
-                    à &ldquo;outil de closing&rdquo;.</strong>
-                  </p>
+                  <div className="space-y-4">
+                    <div className="flex items-start gap-3">
+                      <div className="w-8 h-8 rounded-full bg-amber-500/20 border border-amber-500/30 flex items-center justify-center text-amber-400 font-bold text-sm shrink-0">1</div>
+                      <div>
+                        <p className="text-white font-medium text-sm">Le client arrive sur votre site</p>
+                        <p className="text-neutral-400 text-sm">Il clique sur &ldquo;Réserver&rdquo;.</p>
+                      </div>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <div className="w-8 h-8 rounded-full bg-amber-500/20 border border-amber-500/30 flex items-center justify-center text-amber-400 font-bold text-sm shrink-0">2</div>
+                      <div>
+                        <p className="text-white font-medium text-sm">Il choisit sa date, l&apos;heure, le nombre de personnes</p>
+                        <p className="text-neutral-400 text-sm">Tout est simple, comme réserver un billet d&apos;avion.</p>
+                      </div>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <div className="w-8 h-8 rounded-full bg-amber-500/20 border border-amber-500/30 flex items-center justify-center text-amber-400 font-bold text-sm shrink-0">3</div>
+                      <div>
+                        <p className="text-white font-medium text-sm">Vous recevez la réservation</p>
+                        <p className="text-neutral-400 text-sm">Sur votre tableau de bord, sans un seul coup de téléphone.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="mt-4 pt-4 border-t border-neutral-700/50">
+                    <p className="text-amber-300 text-sm font-medium">
+                      💬 Pour les demandes spéciales (groupes, événements privés SOBRAGA, SOVENGAB) 
+                      → un bouton WhatsApp dédié, pour que vous puissiez gérer ces demandes à part, 
+                      quand vous êtes disponible.
+                    </p>
+                  </div>
                 </div>
 
-                {/* 3. LE GAIN CONCRET */}
-                <div className="border-l-2 border-green-500/70 pl-4">
-                  <p className="text-green-400 font-bold text-sm uppercase tracking-wider mb-1">
-                    🟢 Le gain concret
+                {/* Résultat */}
+                <div className="bg-green-500/5 rounded-2xl p-5 border border-green-500/20">
+                  <p className="text-green-400 font-bold text-sm uppercase tracking-wider mb-3">
+                    ✅ Ce que ça change pour vous
                   </p>
-                  <p className="text-neutral-300">
-                    Un restaurant qui prend ses réservations en ligne remplit en moyenne{" "}
-                    <strong className="text-white">30% de tables en plus</strong> le week-end, simplement parce 
-                    qu&apos;aucun appel n&apos;est perdu. Pour vous, cela signifie : votre salle 
-                    tourne plus vite, vos serveurs sont moins stressés, et vous restez 
-                    concentré sur l&apos;essentiel — <strong className="text-green-300">créer des plats qui justifient 
-                    votre réputation</strong>. Le système garde même la trace des clients, 
-                    leurs préférences, leurs anniversaires. Du marketing relationnel 
-                    automatique, sans effort.
-                  </p>
-                </div>
-
-                {/* 4. L'EFFET CHOC */}
-                <div className="border-l-2 border-amber-400 pl-4 bg-amber-400/5 rounded-r-lg p-3">
-                  <p className="text-amber-300 font-bold text-sm uppercase tracking-wider mb-1">
-                    ⚡ L&apos;effet choc
-                  </p>
-                  <p className="text-white font-semibold">
-                    Chaque fois que votre téléphone sonne en cuisine, vous ne perdez pas juste 
-                    du temps — vous perdez de la qualité, donc de la réputation, donc de l&apos;argent. 
-                    <span className="gold-text font-black"> Un restaurant injoignable est un restaurant invisible.</span>
-                  </p>
+                  <div className="space-y-2 text-neutral-300 text-sm">
+                    <p>→ <span className="text-white font-medium">Votre téléphone ne sonne plus en cuisine.</span> Vous restez concentré sur vos plats.</p>
+                    <p>→ Les réservations arrivent <span className="text-white font-medium">jour et nuit, même quand le restaurant est fermé</span>.</p>
+                    <p>→ Vous savez exactement combien de tables sont réservées, à quelle heure, et pour combien de personnes.</p>
+                    <p>→ <span className="text-white font-medium">Plus de tables pleines</span> = plus de revenus, sans stress en plus.</p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -756,24 +742,24 @@ export default function ChefOmielPage() {
             <div className="lg:col-span-2">
               <div className="card-premium gold-border rounded-2xl p-5 space-y-4 gold-glow">
                 <p className="text-amber-400 font-bold text-sm text-center uppercase tracking-widest">
-                  Réservation Rapide
+                  Le client voit ça
                 </p>
                 <div className="space-y-3">
                   <div className="p-3 rounded-xl bg-neutral-800/40 border border-neutral-700/30 text-sm text-neutral-300">
-                    📅 Date souhaitée
+                    📅 Choisir la date
                   </div>
                   <div className="p-3 rounded-xl bg-neutral-800/40 border border-neutral-700/30 text-sm text-neutral-300">
-                    👥 Nombre de couverts
+                    👥 Nombre de personnes
                   </div>
                   <div className="p-3 rounded-xl bg-neutral-800/40 border border-neutral-700/30 text-sm text-neutral-300">
-                    🕐 Créneau horaire
+                    🕐 Choisir l&apos;heure
                   </div>
                   <button className="w-full py-3 rounded-xl bg-gradient-to-r from-amber-500 to-amber-600 text-neutral-950 font-bold text-sm text-center">
                     Réserver maintenant
                   </button>
                 </div>
                 <p className="text-center text-neutral-500 text-xs">
-                  Groupes & Événements :{" "}
+                  Demande spéciale (groupe, événement) :{" "}
                   <a
                     href={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
                       "Chef, demande de réservation groupe/événement."
@@ -793,29 +779,43 @@ export default function ChefOmielPage() {
       </main>
 
       {/* ═══════════════════════════════════════════════
-          FOOTER / L'ULTIMATUM
+          FOOTER / CONCLUSION
           ═══════════════════════════════════════════════ */}
       <footer className="border-t border-neutral-800/50 bg-neutral-950">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20">
           <div className="card-premium gold-border rounded-3xl p-6 sm:p-10 lg:p-12 text-center space-y-8 gold-glow">
             <span className="inline-block px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest bg-amber-400/10 text-amber-400 border border-amber-400/20">
-              L&apos;Ultimatum
+              On y va ?
             </span>
 
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black leading-tight tracking-tight">
-              Chef, le constat est simple.{" "}
-              <span className="gold-text">
-                Rester uniquement sur Facebook, c&apos;est laisser de l&apos;argent sur la table
-                et limiter la portée historique de votre œuvre.
-              </span>
+              Chef, voilà à quoi ressemble{" "}
+              <span className="gold-text">votre futur site</span>
             </h2>
 
             <p className="text-neutral-300 text-base sm:text-lg leading-relaxed max-w-2xl mx-auto">
-              Ce site est votre arme pour dominer le marché. La structure technique 
-              est prête, il ne manque plus que vos images et vos textes pour l&apos;activer. 
-              Si vous refusez cette opportunité, vous continuez volontairement à offrir 
-              des clients à vos concurrents.
+              Chaque section que vous venez de voir est prête techniquement. 
+              Il ne manque plus que vos photos, vos vidéos et vos textes pour tout activer.
             </p>
+
+            <div className="grid sm:grid-cols-2 gap-4 max-w-lg mx-auto text-left">
+              <div className="bg-neutral-900/50 rounded-xl p-4 border border-neutral-800">
+                <p className="text-amber-400 font-bold text-sm mb-1">📚 La Boutique</p>
+                <p className="text-neutral-400 text-xs">Vendez vos 3 livres au monde entier, sans commission</p>
+              </div>
+              <div className="bg-neutral-900/50 rounded-xl p-4 border border-neutral-800">
+                <p className="text-amber-400 font-bold text-sm mb-1">🍽️ Le Menu</p>
+                <p className="text-neutral-400 text-xs">Montrez vos plats en photo pour donner envie</p>
+              </div>
+              <div className="bg-neutral-900/50 rounded-xl p-4 border border-neutral-800">
+                <p className="text-amber-400 font-bold text-sm mb-1">📖 Votre Histoire</p>
+                <p className="text-neutral-400 text-xs">Votre parcours, vos preuves, votre crédibilité</p>
+              </div>
+              <div className="bg-neutral-900/50 rounded-xl p-4 border border-neutral-800">
+                <p className="text-amber-400 font-bold text-sm mb-1">📅 Les Réservations</p>
+                <p className="text-neutral-400 text-xs">Les clients réservent tout seuls, 24h/24</p>
+              </div>
+            </div>
 
             <a
               href={`https://wa.me/${WHATSAPP_NUMBER}?text=${WHATSAPP_MESSAGE}`}
@@ -830,7 +830,7 @@ export default function ChefOmielPage() {
             </a>
 
             <p className="text-neutral-500 text-sm">
-              On prend 5 minutes sur WhatsApp pour lancer la machine.
+              On prend 5 minutes sur WhatsApp, je vous montre comment lancer la machine.
             </p>
           </div>
         </div>
