@@ -1040,7 +1040,7 @@ export default function ChefOmielPage() {
               </div>
 
               <p className="text-neutral-500 text-sm">
-                ⏱️ Je vous réponds personnellement en quelques minutes. Le premier échange est gratuit et sans engagement.
+                ⏱️Le premier échange est gratuit et sans engagement.
               </p>
             </div>
 
