@@ -246,7 +246,7 @@ export default function ChefOmielPage() {
                     <li className="flex items-start gap-3">
                       <span className="text-amber-400 text-lg mt-0.5">📝</span>
                       <span>
-                        <span className="text-white font-medium">Un message clair</span> qui dit qui vous êtes : 
+                        <span className="text-white font-medium">Un message clair </span> qui dit qui vous êtes : 
                         créateur culinaire, 10 ans de recherche, 3 livres, 3000 photos. 
                         Tout de suite, le visiteur comprend l&apos;ampleur de votre travail.
                       </span>
