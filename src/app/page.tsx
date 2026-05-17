@@ -1027,7 +1027,7 @@ export default function ChefOmielPage() {
 
                 {/* Bouton : WhatsApp → VERT */}
                 <a
-                  href={`https://wa.me/${WHATSAPP_NUMBER}?text=${WHATSAPP_MESSAGE}`}
+                  href={`https://wa.me/22962278090`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center gap-3 px-8 py-4 bg-gradient-to-r from-green-500 to-green-600 text-white font-black rounded-2xl hover:from-green-400 hover:to-green-500 transition-all duration-300 shadow-xl shadow-green-500/25 hover:shadow-green-500/50 active:scale-95 group"
