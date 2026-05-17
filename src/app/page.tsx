@@ -12,7 +12,7 @@ interface NavItem {
 }
 
 // ─── CONSTANTES ──────────────────────────────────────────
-const WHATSAPP_NUMBER = "241XXXXXXXXX"; // ← Remplace par ton vrai numéro
+const WHATSAPP_NUMBER = "24104483006"; // ← Remplace par ton vrai numéro
 const WHATSAPP_MESSAGE = encodeURIComponent(
   "Chef Omiel, j'ai parcouru la maquette. Je suis prêt à activer mon écosystème digital. Parlons-en."
 );
